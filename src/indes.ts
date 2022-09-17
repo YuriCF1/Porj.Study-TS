@@ -1,5 +1,5 @@
 //Tipos: String, boolean, number...
 
-const x: number = 10
+let x: number = 12
 
 console.log(x);
