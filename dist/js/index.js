@@ -26,3 +26,13 @@ id = 200;
 const UserId = 10;
 const UserId2 = '001';
 const UserId3 = [5, '02'];
+var Size;
+(function (Size) {
+    Size["P"] = "Pequeno";
+    Size["M"] = "M\u00E9dio";
+    Size["G"] = "Grande";
+})(Size || (Size = {}));
+const camisa = {
+    name: "Camisa gola V",
+    size: Size.G
+};

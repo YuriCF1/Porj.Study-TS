@@ -61,5 +61,22 @@ const UserId: myIdType = 10;
 const UserId2: myIdType = '001';
 const UserId3: myIdType = [5, '02'];
 
-//Enum 
+//Enum
+// Enumerar uma coleção de dados
+// Ex: Determinar no sistema, o tamanho de roupas, sem  ficar escrevendo o tamanho como 
+// '(size: Médio, size: Pequeno)'
+enum Size {
+    P = 'Pequeno',
+    M = 'Médio',
+    G = 'Grande'
+
+}
+
+const camisa = {
+    name: "Camisa gola V",
+    size: Size.G
+
+}
+
+// console.log(camisa.size); //Grande
  
