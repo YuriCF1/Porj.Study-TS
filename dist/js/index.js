@@ -34,10 +34,31 @@ var Size;
 })(Size || (Size = {}));
 const camisa = {
     name: "Camisa gola V",
-    size: Size.G
+    size: Size.M
 };
+console.log(camisa.size);
 let teste;
 teste = "Algum valor";
 let autenticado;
 autenticado = 'sim';
 autenticado = null;
+function sum(a, b) {
+    return a + b;
+}
+function sayHelloTo(name) {
+    return `Hello ${name}`;
+}
+console.log(sayHelloTo('Yuri'));
+function logger(msg) {
+    console.log(msg);
+}
+logger('Testando');
+function greeting(name, greet) {
+    if (greet) {
+        console.log(`Olá, ${greet} ${name}`);
+        return;
+    }
+    console.log(`Olá, ${name}`);
+}
+greeting('José', 'Sr.');
+greeting('José');
