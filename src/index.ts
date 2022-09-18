@@ -80,3 +80,13 @@ const camisa = {
 
 // console.log(camisa.size); //Grande
  
+//Literal types
+//Dá um valor prévio para a variável, não consigo mudar, apenas confirmálo
+let teste: "Algum valor";
+// teste = "outro   valor" //Não consigo mudar
+teste = "Algum valor" //Atribuo
+
+// Exemplo. Usutário entrando no sistema
+let autenticado: "sim" | null;
+autenticado = 'sim'; //Atribui o único valor provável
+autenticado =  null; //Confirma que não está

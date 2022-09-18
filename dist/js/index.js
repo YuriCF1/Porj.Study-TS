@@ -36,3 +36,8 @@ const camisa = {
     name: "Camisa gola V",
     size: Size.G
 };
+let teste;
+teste = "Algum valor";
+let autenticado;
+autenticado = 'sim';
+autenticado = null;
