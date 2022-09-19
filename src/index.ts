@@ -108,7 +108,7 @@ function sayHelloTo(name: string): string {
 console.log(sayHelloTo('Yuri'));
 
 //Quando a função não retorna nada
-function logger(msg: string): void { 
+function logger(msg: string): void {
     console.log(msg);
 
 }
@@ -116,14 +116,42 @@ function logger(msg: string): void {
 logger('Testando')
 
 //Dado opcional________________________________________________________________
-function greeting(name: string, greet?: string) : void {
+function greeting(name: string, greet?: string): void {
     // console.log(`Olá ${greet} ${ name}`); // greeting('Jose'); = Olá undefined José. Tem que tratar o dado, ver se ele veio ou não
     if (greet) {
-        console.log(`Olá, ${greet} ${ name}`)
+        console.log(`Olá, ${greet} ${name}`)
         return;
-    } 
-        
-    console.log(`Olá, ${ name}`);
+    }
+
+    console.log(`Olá, ${name}`);
 }
 greeting('José', 'Sr.');
 greeting('José');
+
+// Interfaces________________________________________________________________
+//Padronização de algo para usar como tipo
+
+interface MathFunctionParams {
+    n1: number,
+    n2: number,
+
+}
+
+function sumNumbers(nums: MathFunctionParams) {
+    return nums.n1 + nums.n2
+}
+console.log(sumNumbers({ n1: 1, n2: 2 })); //Se declara a interface assim
+
+
+function multiplyNumbers(nums: MathFunctionParams) {
+    return nums.n1 * nums.n2
+}
+console.log(multiplyNumbers({ n1: 1, n2: 2 })); //Se declara a interface assim
+
+const somNumbers: MathFunctionParams = {
+    n1: 5,
+    n2: 2
+
+} 
+
+console.log(multiplyNumbers(somNumbers));
