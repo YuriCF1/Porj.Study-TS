@@ -152,6 +152,6 @@ const somNumbers: MathFunctionParams = {
     n1: 5,
     n2: 2
 
-} 
+}
 
 console.log(multiplyNumbers(somNumbers));
