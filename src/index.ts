@@ -148,10 +148,13 @@ function multiplyNumbers(nums: MathFunctionParams) {
 }
 console.log(multiplyNumbers({ n1: 1, n2: 2 })); //Se declara a interface assim
 
-const somNumbers: MathFunctionParams = {
+const someNumbers: MathFunctionParams = {
     n1: 5,
     n2: 2
 
 }
 
-console.log(multiplyNumbers(somNumbers));
+console.log(multiplyNumbers(someNumbers)); // = 10
+
+// Narrowing
+//Checar os tipos. A forma de garantir que um tipo seja mantido numa sequência de código. Feito na linha 119, com o 'greeting'

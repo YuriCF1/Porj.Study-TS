@@ -62,3 +62,16 @@ function greeting(name, greet) {
 }
 greeting('José', 'Sr.');
 greeting('José');
+function sumNumbers(nums) {
+    return nums.n1 + nums.n2;
+}
+console.log(sumNumbers({ n1: 1, n2: 2 }));
+function multiplyNumbers(nums) {
+    return nums.n1 * nums.n2;
+}
+console.log(multiplyNumbers({ n1: 1, n2: 2 }));
+const someNumbers = {
+    n1: 5,
+    n2: 2
+};
+console.log(multiplyNumbers(someNumbers));
