@@ -221,3 +221,32 @@ console.log(zeca);
 
 zeca.showUserName()
 zeca.showUserRole(true)
+
+//Interfaces em classes 
+interface IVehicle { //Normalmente começa com I para explicitar a interface
+    brand: string,
+    showbrand() : void
+}
+
+class Car implements IVehicle {
+
+    public brand
+    public wheels
+    
+    constructor(brand: string, wheels: number) {
+        this.brand = brand
+        this.wheels = wheels
+          
+    }
+
+    showbrand(): void {
+        console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas`);
+ 
+
+    }
+}
+
+const car1 = new Car('Ford', 4)
+
+console.log(car1);
+car1.showbrand()
