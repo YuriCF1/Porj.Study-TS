@@ -84,3 +84,33 @@ function doSomething(info) {
     console.log(typeof info);
 }
 doSomething(5);
+function showArraysItems(arr) {
+    arr.forEach((item) => {
+        console.log(`ITEM: ${item}`);
+    });
+}
+const a1 = [1, 2, 3];
+const a2 = ['a', 'b', 'c'];
+console.log(a1);
+console.log(a2);
+class User {
+    constructor(name, role, isApproved) {
+        this.name = name;
+        this.role = role;
+        this.isApproved = isApproved;
+    }
+    showUserName() {
+        console.log(`O nome do usuário é ${this.name}`);
+    }
+    showUserRole(canShow) {
+        if (canShow) {
+            console.log(`O cargo do usuário é: ${this.role}`);
+            return;
+        }
+        console.log('Informação restrita');
+    }
+}
+const zeca = new User('Zeca', 'Admin', true);
+console.log(zeca);
+zeca.showUserName();
+zeca.showUserRole(true);
