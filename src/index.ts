@@ -158,3 +158,13 @@ console.log(multiplyNumbers(someNumbers)); // = 10
 
 // Narrowing
 //Checar os tipos. A forma de garantir que um tipo seja mantido numa sequência de código. Feito na linha 119, com o 'greeting'
+function doSomething (info: number |  boolean) { //Verificando se o tipo de dado é numérico
+    if (typeof info === "number") {
+        console.log(`O número é ${info}`);
+        return
+    } 
+    console.log(`Não foi passado um número`);
+    console.log(typeof info);
+}
+
+doSomething(5) // 'O número é 5
