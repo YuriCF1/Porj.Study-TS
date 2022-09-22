@@ -119,10 +119,25 @@ class Car {
         this.brand = brand;
         this.wheels = wheels;
     }
-    showbrand() {
-        console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas`);
+    showbrand(carro, tipo) {
+        if (carro != 'SuperC') {
+            console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas`);
+            return;
+        }
+        if (tipo instanceof SuperCars) {
+            console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas, e o motor é ${tipo.engine.toFixed(1)}`);
+        }
     }
 }
 const car1 = new Car('Ford', 4);
 console.log(car1);
-car1.showbrand();
+car1.showbrand('super');
+class SuperCars extends Car {
+    constructor(brand, wheels, engine) {
+        super(brand, wheels);
+        this.engine = engine;
+    }
+}
+const car2 = new SuperCars("Audi", 4, 2.0);
+console.log(car2);
+car2.showbrand('SuperC', car2);

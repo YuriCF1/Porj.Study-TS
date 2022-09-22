@@ -225,28 +225,50 @@ zeca.showUserRole(true)
 //Interfaces em classes 
 interface IVehicle { //Normalmente começa com I para explicitar a interface
     brand: string,
-    showbrand() : void
+    showbrand(carro: string, tipo?: object | null): void
 }
 
 class Car implements IVehicle {
 
     public brand
     public wheels
-    
+
     constructor(brand: string, wheels: number) {
         this.brand = brand
         this.wheels = wheels
-          
+
     }
 
-    showbrand(): void {
-        console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas`);
- 
+    showbrand(carro?: string, tipo?: object | null): void {
+        if (carro != 'SuperC') {
+            console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas`);
+            return
+        }
 
+        if (tipo instanceof SuperCars) { //TIVE QUE CONFIRMAR A INSTANCIA EXPLICITAMENTE
+            console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas, e o motor é ${tipo.engine.toFixed(1)}`);
+             }
     }
 }
 
 const car1 = new Car('Ford', 4)
 
 console.log(car1);
-car1.showbrand()
+car1.showbrand('super')
+
+//Heranca
+class SuperCars extends Car {
+    public engine;
+
+    constructor(brand: string, wheels: number, engine: number) {
+        super(brand, wheels)
+        this.engine = engine
+    }
+}
+
+const car2 = new SuperCars("Audi", 4, 2.0)
+console.log(car2);
+
+car2.showbrand('SuperC', car2);
+// console.log(car1 instanceof SuperCars);
+
