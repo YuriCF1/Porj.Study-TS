@@ -247,7 +247,7 @@ class Car implements IVehicle {
 
         if (tipo instanceof SuperCars) { //TIVE QUE CONFIRMAR A INSTANCIA EXPLICITAMENTE
             console.log(`A marca do carro é: ${this.brand}, com ${this.wheels} rodas, e o motor é ${tipo.engine.toFixed(1)}`);
-             }
+        }
     }
 }
 
@@ -275,12 +275,25 @@ car2.showbrand('SuperC', car2);
 //Decorator 
 //Observação de dados
 
+function BaseParameters() {
+    return function <T extends { new(...args: any[]): {} }>(constructor: T) { //{} = object
+        return class extends constructor {
+            public id = Math.random()
+            public createdAt = new Date()
+
+        }
+    }
+}
+
+@BaseParameters()
 class Person {
     public name
-    
+
     constructor(name: string) {
         this.name = name
-
     }
-
 }
+
+const sam = new Person("Sam")
+console.log(sam);
+
