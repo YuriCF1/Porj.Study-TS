@@ -272,3 +272,15 @@ console.log(car2);
 car2.showbrand('SuperC', car2);
 // console.log(car1 instanceof SuperCars);
 
+//Decorator 
+//Observação de dados
+
+class Person {
+    public name
+    
+    constructor(name: string) {
+        this.name = name
+
+    }
+
+}
